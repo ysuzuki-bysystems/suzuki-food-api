@@ -8,6 +8,7 @@ export async function middleware(request: NextRequest) {
     throw new Error(`${endpoint?.length}, ${client_id?.length}, ${client_secret?.length}`);
   }
 
+  /*
   const token = request.headers.get("authorization");
   if (token === null || !token.startsWith("Bearer ")) {
     return NextResponse.json({ "error": "bad request" }, { status: 400 });
@@ -33,6 +34,7 @@ export async function middleware(request: NextRequest) {
   if (raw["active"] !== true) {
     return NextResponse.json({ "error": "bad request" }, { status: 400 });
   }
+  */
 }
  
 export const config = {
